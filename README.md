@@ -1,9 +1,5 @@
-<img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/HBTN-hbnb-Final.png" width="160" height=auto />
 
 # AirBnB Clone: Phase # 3
-
-: API with Swagger
-
 ## Description
 
 Project attempts to clone the the AirBnB application and website, including the
@@ -46,34 +42,6 @@ HBNB_MYSQL_HOST=localhost HBNB_MYSQL_DB=hbnb_test_db HBNB_TYPE_STORAGE=db \
   * __web static:__ [W3C Validator](https://validator.w3.org/)
   * __bash:__ ShellCheck 0.3.3
 
-<img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/hbnb_step5.png" />
-
-## Configuration Files
-
-The `/config/` directory contains configuration files for `nginx` and the
-Upstart scripts.  The nginx configuration file is for the configuration file in
-the path: `/etc/nginx/sites-available/default`.  The enabled site is a sym link
-to that configuration file.  The upstart script should be saved in the path:
-`/etc/init/[FILE_NAME.conf]`.  To begin this service, execute:
-
-```
-$ sudo start airbnb.conf
-```
-This script's main task is to execute the following `gunicorn` command:
-
-```
-$ gunicorn --bind 127.0.0.1:8001 wsgi.wsgi:web_flask.app
-```
-
-The `gunicorn` command starts an instance of a Flask Application.
-
----
-
-### Web Server Gateway Interface (WSGI)
-
-All integration with gunicorn occurs with `Upstart` `.conf` files.  The python
-code for the WSGI is listed in the `/wsgi/` directory.  These python files run
-the designated Flask Application.
 
 ## Setup
 
@@ -203,20 +171,11 @@ create: create [ARG] [PARAM 1] [PARAM 2] ...
   * **update with dictionary:** `<class name>.update(<id>,
     <dictionary representation>)`
 
----
-
-### Continuous Integration Tests
-
-Uses [Travis-CI](https://travis-ci.org/) to run all tests on all commits to the
-github repo
 
 ## Authors
 
-* MJ Johnson, [@mj31508](https://github.com/mj31508)
-* David John Coleman II, [davidjohncoleman.com](http://www.davidjohncoleman.com/) | [@djohncoleman](https://twitter.com/djohncoleman)
-* Kimberly Wong, [kjowong](https://github.com/kjowong) | [@kjowong](https://twitter.com/kjowong) | [kjowong@gmail.com](kjowong@gmail.com)
-* Carrie Ybay, [hicarrie](https://github.com/hicarrie) | [@hicarrie_](https://twitter.com/hicarrie_)
-* Jared Heck, [jarehec](https://github.com/jarehec) | [@jarehec](https://twitter.com/jarehec)
+* Adava Onimisi <adavaonimisi@gmail.com>
+* Folorunsho Ifeoluwa 
 
 ## License
 
